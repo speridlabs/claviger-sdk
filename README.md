@@ -8,29 +8,31 @@ Packages are MIT-licensed and install from public GitHub Releases without a GitH
 Python 3.10+:
 
 ```bash
-python -m pip install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.2.0/claviger_sdk-0.2.0-py3-none-any.whl
+python -m pip install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.0/claviger_sdk-0.3.0-py3-none-any.whl
 ```
 
 Node.js 22+ with ES modules:
 
 ```bash
-npm install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.2.0/claviger-sdk-typescript-0.2.0.tgz
+npm install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.0/claviger-sdk-typescript-0.3.0.tgz
 ```
 
 Pin the version and retain dependency lockfiles. Release assets include `SHA256SUMS`.
 
 ## Configure and resolve
 
-Obtain `CLAVIGER_ENDPOINT` and model access from your administrator. The SDK has no built-in
-endpoint. Supply a token through `CLAVIGER_TOKEN` when required; keep credentials out of source code.
+SDK 0.3.0 and later connect to `https://claviger.speridlabs.com` by default; set
+`CLAVIGER_ENDPOINT` only for another deployment. Release 0.2.0 has no built-in endpoint and requires
+`CLAVIGER_ENDPOINT=https://claviger.speridlabs.com`. Obtain model access from your administrator
+and supply a token through `CLAVIGER_TOKEN` when required; keep credentials out of source code.
 
 Python:
 
 ```python
 from claviger_sdk import Claviger
 
-with Claviger() as client:
-    model_dir = client.resolve("speridlabs-model-registry://gpt2")
+client = Claviger()
+model_dir = client.resolve("speridlabs-model-registry://gpt2")
 ```
 
 TypeScript:
