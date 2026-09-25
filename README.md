@@ -8,13 +8,13 @@ Packages are MIT-licensed and install from public GitHub Releases without a GitH
 Python 3.10+:
 
 ```bash
-python -m pip install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.0/claviger_sdk-0.3.0-py3-none-any.whl
+python -m pip install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.1/claviger_sdk-0.3.1-py3-none-any.whl
 ```
 
 Node.js 22+ with ES modules:
 
 ```bash
-npm install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.0/claviger-sdk-typescript-0.3.0.tgz
+npm install https://github.com/speridlabs/claviger-sdk/releases/download/claviger-sdk-v0.3.1/claviger-sdk-typescript-0.3.1.tgz
 ```
 
 Pin the version and retain dependency lockfiles. Release assets include `SHA256SUMS`.
